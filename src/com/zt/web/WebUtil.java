@@ -1,17 +1,10 @@
 package com.zt.web;
 
-import java.beans.Encoder;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.net.URLEncoder;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.ibm.wsdl.util.StringUtils;
-import com.zt.util.StringUtil;
 
 
 /**

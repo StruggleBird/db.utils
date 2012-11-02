@@ -1,16 +1,11 @@
 package com.zt.util;
 
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-import org.apache.commons.httpclient.util.DateUtil;
-
-import sun.util.calendar.CalendarUtils;
 
 
 /**
