@@ -1,0 +1,1 @@
+properties config file echoding is utf-8
