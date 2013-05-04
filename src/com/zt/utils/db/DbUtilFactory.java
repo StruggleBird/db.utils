@@ -16,7 +16,7 @@ public class DbUtilFactory
 
             if (StringUtil.IsNullOrEmpty(dbUtilImplClassName))
             {
-                throw new RuntimeException("没有配置可以提供的数据库操作实现类！");
+                throw new RuntimeException("娌℃湁閰嶇疆鍙互鎻愪緵鐨勬暟鎹簱鎿嶄綔瀹炵幇绫伙紒");
             }
 
             try

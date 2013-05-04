@@ -11,7 +11,7 @@ public class Order {
 	
 	public static final String DESC="desc";
 	
-	private StringBuilder sbOrder = new StringBuilder(); //where 条件语句
+	private StringBuilder sbOrder = new StringBuilder(); //where 鏉′欢璇彞
 	
 	private boolean isFirstOrder=true;
 	
@@ -49,7 +49,7 @@ public class Order {
 		if (ASC.equalsIgnoreCase(mode)||DESC.equalsIgnoreCase(mode)) {
 			return mode+" ";
 		}
-		throw new RuntimeException("排序方式: "+mode+" 错误");
+		throw new RuntimeException("鎺掑簭鏂瑰紡: "+mode+" 閿欒");
 	}
 	
 }

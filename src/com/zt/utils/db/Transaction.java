@@ -1,7 +1,7 @@
 package com.zt.utils.db;
 
 /**
- * 事物接口
+ * 浜嬬墿鎺ュ彛
  * @author zt
  * @since 2010-3-12
  */

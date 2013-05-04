@@ -3,7 +3,7 @@ package com.zt.utils.db.sql;
 
 import com.zt.utils.commons.StringUtil;
 /**
- * É¾³ıÓï¾ä
+ * åˆ é™¤è¯­å¥
  * @author zhoutao
  *
  */

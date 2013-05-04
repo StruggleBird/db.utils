@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 import com.zt.utils.commons.StringUtil;
 
 /**
- * Êı¾İ¿âÁ¬½Ó¹ÜÀíÀà
+ * æ•°æ®åº“è¿æ¥ç®¡ç†ç±»
  * 
  * @author zt
  * 
@@ -44,8 +44,8 @@ public class ConnectionManager
     }
 
     /**
-     *  »ñÈ¡Êı¾İ¿âÁ¬½Ó
-     *  Í¬²½·½·¨ ±£Ö¤Í¬Ò»Ê±¼äÖ»ÄÜ±»µ÷ÓÃÒ»´Î
+     *  è·å–æ•°æ®åº“è¿æ¥
+     *  åŒæ­¥æ–¹æ³• ä¿è¯åŒä¸€æ—¶é—´åªèƒ½è¢«è°ƒç”¨ä¸€æ¬¡
      * @return java.sql.Connection
      */
     public static synchronized Connection GetConnection()
@@ -81,7 +81,7 @@ public class ConnectionManager
     }
 
     /**
-     * Í¨¹ıJNDI»ñÈ¡Êı¾İÁ¬½Ó
+     * é€šè¿‡JNDIè·å–æ•°æ®è¿æ¥
      * @return java.sql.Connection
      * @throws NamingException
      * @throws SQLException
@@ -100,7 +100,7 @@ public class ConnectionManager
     }
 
     /**
-     * Í¨¹ıJDBC»ñÈ¡Êı¾İÁ¬½Ó
+     * é€šè¿‡JDBCè·å–æ•°æ®è¿æ¥
      * @return java.sql.Connection
      * @throws SQLException
      * @throws ClassNotFoundException
@@ -113,7 +113,7 @@ public class ConnectionManager
     }
 
     /**
-     * Í¨¹ıDBCP»ñÈ¡Êı¾İÁ¬½Ó
+     * é€šè¿‡DBCPè·å–æ•°æ®è¿æ¥
      * @return java.sql.Connection
      * @throws Exception
      */
@@ -131,8 +131,8 @@ public class ConnectionManager
     }
 
     /**
-     * ¹Ø±ÕÊı¾İ¿âÁ¬½Ó
-     * @param conn Êı¾İ¿âÁ¬½Ó¶ÔÏó
+     * å…³é—­æ•°æ®åº“è¿æ¥
+     * @param conn æ•°æ®åº“è¿æ¥å¯¹è±¡
      */
     public static void closeConnection(Connection conn)
     {
@@ -152,7 +152,7 @@ public class ConnectionManager
     }
 
     /**
-     * ¹Ø±ÕResultSet
+     * å…³é—­ResultSet
      * @param res
      */
     public static void closeResultSet(ResultSet res)
@@ -172,7 +172,7 @@ public class ConnectionManager
     }
 
     /**
-     * ¹Ø±ÕÊı¾İ¿â²Ù×÷¶ÔÏó
+     * å…³é—­æ•°æ®åº“æ“ä½œå¯¹è±¡
      * @param pstmt
      */
     public static void closeStatement(PreparedStatement pstmt)
@@ -192,7 +192,7 @@ public class ConnectionManager
     }
 
     /**
-     * ¹Ø±ÕËùÓĞ¶ÔÏó
+     * å…³é—­æ‰€æœ‰å¯¹è±¡
      * @param res
      * @param pstmt
      * @param conn
@@ -226,7 +226,7 @@ public class ConnectionManager
     }
 
     /**
-     * ¹Ø±ÕÊı¾İ¿â²Ù×÷ºÍÁ¬½Ó¶ÔÏó
+     * å…³é—­æ•°æ®åº“æ“ä½œå’Œè¿æ¥å¯¹è±¡
      * @param res
      * @param pstmt
      * @param conn

@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 public class MethodUtil {
 
 	/**
-	 * 判断指定类中的指定字段是否包含Get方法
+	 * 鍒ゆ柇鎸囧畾绫讳腑鐨勬寚瀹氬瓧娈垫槸鍚﹀寘鍚獹et鏂规硶
 	 * @param clazz
 	 * @param field
 	 * @return boolean
@@ -25,7 +25,7 @@ public class MethodUtil {
 	}
 	
 	/**
-	 * 判断指定类中的指定字段是否包含Set方法
+	 * 鍒ゆ柇鎸囧畾绫讳腑鐨勬寚瀹氬瓧娈垫槸鍚﹀寘鍚玈et鏂规硶
 	 * @param clazz
 	 * @param field
 	 * @return boolean

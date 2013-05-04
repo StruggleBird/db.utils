@@ -29,13 +29,13 @@ public class ResultUtil<T>
     protected static final Log log = LogFactory.getLog(ResultUtil.class);
 
     /**
-     * ×¢ÈëmapÖµµ½¶ÔÏóÖĞ
+     * æ³¨å…¥mapå€¼åˆ°å¯¹è±¡ä¸­
      * 
      * @param cla
-     *            ÒªÊµÀı»¯µÄÊµÌåÀà
+     *            è¦å®ä¾‹åŒ–çš„å®ä½“ç±»
      * @param map
-     *            ´æ´¢ÊµÌå¶ÔÏóÏàÓ¦ÊôĞÔµÄ¼¯ºÏ
-     * @return ÊµÌåÀà¶ÔÏó
+     *            å­˜å‚¨å®ä½“å¯¹è±¡ç›¸åº”å±æ€§çš„é›†åˆ
+     * @return å®ä½“ç±»å¯¹è±¡
      */
     private static <T> T ImmitValue(Class<T> clazz, Map<String, Object> map) throws Exception
     {
@@ -49,7 +49,7 @@ public class ResultUtil<T>
         Set<String> dbColumnNames = map.keySet();
 
         for (String columnName : dbColumnNames)
-        { //±éÀú¶ÁÈ¡µÄÁĞÃû³Æ
+        { //éå†è¯»å–çš„åˆ—åç§°
 
             for (ColumnEntity column : columnsMap.values())
             {
@@ -66,10 +66,10 @@ public class ResultUtil<T>
     }
 
     /**
-     * ´ÓSortedMapÖĞ»ñÈ¡ÊµÌå¼¯ºÏ
+     * ä»SortedMapä¸­è·å–å®ä½“é›†åˆ
      * @param clazz 
      * @param maps 
-     * @return ÊµÌåÀàÁĞ±íList<Object>
+     * @return å®ä½“ç±»åˆ—è¡¨List<Object>
      * @throws Exception 
      * @throws IllegalArgumentException
      * @throws SecurityException
@@ -89,10 +89,10 @@ public class ResultUtil<T>
     }
 
     /**
-     * ½«Result×ªĞÍÎªÊµÌåÀàÁĞ±í
-     * @param clazz ÊµÌåÀàÀàĞÍ
-     * @param result result¶ÔÏó
-     * @return ÊµÌåÀàÁĞ±íList<Object>
+     * å°†Resultè½¬å‹ä¸ºå®ä½“ç±»åˆ—è¡¨
+     * @param clazz å®ä½“ç±»ç±»å‹
+     * @param result resultå¯¹è±¡
+     * @return å®ä½“ç±»åˆ—è¡¨List<Object>
      * @throws Exception 
      * @throws IllegalArgumentException
      * @throws SecurityException

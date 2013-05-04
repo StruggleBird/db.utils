@@ -13,7 +13,7 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * DbUtil ´úÀíÀà
+ * DbUtil ä»£ç†ç±»
  * @author zhoutao
  *
  */
@@ -86,7 +86,7 @@ public class DbUtilProxy implements MethodInterceptor
             Object firstArg = args[0];
             if (firstArg != null)
             {
-                //ÅĞ¶ÏµÚÒ»¸ö²ÎÊıµ±Ç°ÀàÊÇ·ñÎªÌí¼ÓÁËEntity×¢½âµÄÀà£¬ÒÔ·Ö±æÊÇ·ñÎªPOJO
+                //åˆ¤æ–­ç¬¬ä¸€ä¸ªå‚æ•°å½“å‰ç±»æ˜¯å¦ä¸ºæ·»åŠ äº†Entityæ³¨è§£çš„ç±»ï¼Œä»¥åˆ†è¾¨æ˜¯å¦ä¸ºPOJO
                 Class<?> objClass = null;
                 if (firstArg instanceof Class)
                 {

@@ -1,7 +1,7 @@
 package com.zt.utils.log;
 
 /**
- * 日志接口
+ * 鏃ュ織鎺ュ彛
  * 
  * @author zhoutao
  */

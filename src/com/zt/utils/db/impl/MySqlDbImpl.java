@@ -10,7 +10,7 @@ import com.zt.utils.db.mapping.TableEntity;
 import com.zt.utils.db.sql.Select;
 
 /**
- * MySql数据库操作实现类
+ * MySql鏁版嵁搴撴搷浣滃疄鐜扮被
  * @author zt
  * @since 2010-3-6
  */

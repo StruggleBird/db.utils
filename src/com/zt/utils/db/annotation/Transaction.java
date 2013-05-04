@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * ÊÂÎï×¢ÊÍ
+ * äº‹ç‰©æ³¨é‡Š
  * @author zt
  * @since 2010-3-11
  *
@@ -18,8 +18,8 @@ public @interface Transaction
 {
 
     /**
-     * »ñÈ¡×Ô¶¨ÒåÊÂÎï¼¶±ğ
-     * @return ÏÂÃæ¼¶±ğÖĞµÄÈÎÒâÒ»ÖÖ
+     * è·å–è‡ªå®šä¹‰äº‹ç‰©çº§åˆ«
+     * @return ä¸‹é¢çº§åˆ«ä¸­çš„ä»»æ„ä¸€ç§
      * <code>Connection.TRANSACTION_READ_UNCOMMITTED</code>, 
      * <code>Connection.TRANSACTION_READ_COMMITTED</code>,
      * <code>Connection.TRANSACTION_REPEATABLE_READ</code>, 

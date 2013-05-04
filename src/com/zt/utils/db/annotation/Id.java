@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * ±êÊ¶Ä¿±êÎªÒ»¸öÊı¾İÖ÷¼ü
+ * æ ‡è¯†ç›®æ ‡ä¸ºä¸€ä¸ªæ•°æ®ä¸»é”®
  * @author zhoutao
  *
  */

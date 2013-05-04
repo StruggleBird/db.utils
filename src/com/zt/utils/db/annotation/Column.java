@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 标识目标为一个数据列
+ * 鏍囪瘑鐩爣涓轰竴涓暟鎹垪
  * @author zhoutao
  *
  */

@@ -9,7 +9,7 @@ import com.zt.utils.db.mapping.Context;
 import com.zt.utils.db.mapping.TableEntity;
 import com.zt.utils.db.sql.Select;
 /**
- * Oracle Êı¾İ²Ù×÷ÊµÏÖÀà
+ * Oracle æ•°æ®æ“ä½œå®ç°ç±»
  * @author zhoutao
  *
  */

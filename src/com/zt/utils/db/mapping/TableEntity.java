@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Êı¾İ±íµÄÓ³ÉäÀà
+ * æ•°æ®è¡¨çš„æ˜ å°„ç±»
  * @author zt
  * @since 2010-3-7
  */
@@ -25,16 +25,16 @@ public class TableEntity
         this.columnsMap = new HashMap<String, ColumnEntity>();
     }
 
-    //Êı¾İ±íÃû³Æ
+    //æ•°æ®è¡¨åç§°
     private String name;
 
-    //Êı¾İ±íÖĞÁĞ¼¯ºÏ
+    //æ•°æ®è¡¨ä¸­åˆ—é›†åˆ
     private Map<String, ColumnEntity> columnsMap;
 
     /**
-     * Ìí¼ÓÁĞµ½±íÖĞ
-     * @param fieldName Àà×Ö¶ÎÃû³Æ
-     * @param columnName Êı¾İ±íÖĞÁĞÃû³Æ
+     * æ·»åŠ åˆ—åˆ°è¡¨ä¸­
+     * @param fieldName ç±»å­—æ®µåç§°
+     * @param columnName æ•°æ®è¡¨ä¸­åˆ—åç§°
      */
     public void addColumnMap(String fieldName, ColumnEntity column)
     {

@@ -2,7 +2,7 @@
 package com.zt.utils.commons;
 
 /**
- * ¿‡
+ * Á±ª
  * @author zt
  * @since 2010-3-21
  */

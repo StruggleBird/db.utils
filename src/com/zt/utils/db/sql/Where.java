@@ -12,7 +12,7 @@ import java.util.List;
 public class Where
 {
 
-    private StringBuilder sbWhere = new StringBuilder(); //where Ìõ¼şÓï¾ä
+    private StringBuilder sbWhere = new StringBuilder(); //where æ¡ä»¶è¯­å¥
 
     private List<Object> params = new ArrayList<Object>();
 

@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * ÅäÖÃÎÄ¼ş¶ÁÈ¡¹¤¾ßÀà
+ * é…ç½®æ–‡ä»¶è¯»å–å·¥å…·ç±»
  * @author zhoutao
  *
  */
@@ -42,7 +42,7 @@ public final class DbConfigUtil extends Properties
 
     private DbConfigUtil()
     {
-        InputStream iStream = getClass().getResourceAsStream("/db.properties"); //»ñÈ¡utilsÏîÄ¿ÖĞµÄÅäÖÃÎÄ¼ş ÒÑ¹ıÊ±
+        InputStream iStream = getClass().getResourceAsStream("/db.properties"); //è·å–utilsé¡¹ç›®ä¸­çš„é…ç½®æ–‡ä»¶ å·²è¿‡æ—¶
         //InputStream iStream =System.getProperty("user.dir").getClass().getResourceAsStream("/db.properties");
         try
         {

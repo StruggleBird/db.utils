@@ -4,7 +4,7 @@ package com.zt.utils.commons;
 import java.math.BigDecimal;
 
 /**
- * ÀàĞÍ¸¨ÖúÀà
+ * ç±»å‹è¾…åŠ©ç±»
  * @author zt
  *
  */

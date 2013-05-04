@@ -2,18 +2,18 @@
 package com.zt.utils.db.mapping;
 
 /**
- *  Êı¾İÁĞµÄÓ³ÉäÀà
+ *  æ•°æ®åˆ—çš„æ˜ å°„ç±»
  * @author zt
  * @since 2010-3-7
  */
 public class ColumnEntity
 {
 
-    private Boolean isPrimary; //ÊÇ·ñÎªÖ÷¼ü
+    private Boolean isPrimary; //æ˜¯å¦ä¸ºä¸»é”®
 
-    private String name; //ÁĞÃû³Æ
+    private String name; //åˆ—åç§°
 
-    private String fieldName; //ÁĞËù¶ÔÓ¦µÄ×Ö¶ÎÃû³Æ
+    private String fieldName; //åˆ—æ‰€å¯¹åº”çš„å­—æ®µåç§°
 
     public String getFieldName()
     {

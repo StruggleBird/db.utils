@@ -13,7 +13,7 @@ import com.zt.utils.log.Log;
 import com.zt.utils.log.LogFactory;
 
 /**
- * Êı¾İ¿âÓ³Éä ÉÏÏÂÎÄ ºËĞÄÀà
+ * æ•°æ®åº“æ˜ å°„ ä¸Šä¸‹æ–‡ æ ¸å¿ƒç±»
  * @author zt
  * @since 2010-3-7
  */
@@ -26,8 +26,8 @@ public class Context
     private static Map<String, TableEntity> tablesMap = new HashMap<String, TableEntity>();
 
     /**
-     * Ìí¼ÓÊµÌåÀàÓ³Éäµ½Êı¾İÄ¿Â¼ÖĞ
-     * @param clazz ÊµÌåÀàClass
+     * æ·»åŠ å®ä½“ç±»æ˜ å°„åˆ°æ•°æ®ç›®å½•ä¸­
+     * @param clazz å®ä½“ç±»Class
      */
     public static synchronized void registerTable(Class<?> clazz)
     {
@@ -56,7 +56,7 @@ public class Context
             {
                 if (field.isAnnotationPresent(com.zt.utils.db.annotation.Column.class))
                 {
-                    //»ñÈ¡×Ö¶ÎËù¶ÔÓ¦µÄÊı¾İ¿âÁĞÃû³Æ
+                    //è·å–å­—æ®µæ‰€å¯¹åº”çš„æ•°æ®åº“åˆ—åç§°
                     Column column = field.getAnnotation(Column.class);
                     boolean isPrimary = field.isAnnotationPresent(Id.class);
 
@@ -83,18 +83,18 @@ public class Context
 
             if (!hasPrimaryKey)
             {
-                throw new RuntimeException("Ã»ÓĞÔÚÊµÌåÀàÖ÷¼ü×Ö¶ÎÉÏÌí¼Ó@Id»ò@Column±êÊ¶£¡");
+                throw new RuntimeException("æ²¡æœ‰åœ¨å®ä½“ç±»ä¸»é”®å­—æ®µä¸Šæ·»åŠ @Idæˆ–@Columnæ ‡è¯†ï¼");
             }
             log.info("register entity[" + clazz.getSimpleName() + "] success");
         }
         else
         {
-            throw new RuntimeException("Ã»ÓĞÔÚÊµÌåÀàÉùÃ÷Ê±Ìí¼Ó @Entity±êÊ¶£¡");
+            throw new RuntimeException("æ²¡æœ‰åœ¨å®ä½“ç±»å£°æ˜æ—¶æ·»åŠ  @Entityæ ‡è¯†ï¼");
         }
     }
 
     /**
-     * Ìí¼Ó±íÓ³Éäµ½¿âÖĞ
+     * æ·»åŠ è¡¨æ˜ å°„åˆ°åº“ä¸­
      * @param tName 
      * @param table
      */

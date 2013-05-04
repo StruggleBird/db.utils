@@ -5,7 +5,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 /**
- * ÈÕÖ¾½Ó¿Ú log4jµÄÊÊÅäÆ÷
+ * æ—¥å¿—æ¥å£ log4jçš„é€‚é…å™¨
  * @author zhoutao
  *
  */

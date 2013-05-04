@@ -2,7 +2,7 @@
 package com.zt.utils.log;
 
 /**
- * ÈÕÖ¾ÊÊÅäÆ÷ ³éÏó¸¸Àà 
+ * æ—¥å¿—é€‚é…å™¨ æŠ½è±¡çˆ¶ç±» 
  * @author zhoutao
  *
  */
@@ -32,7 +32,7 @@ public abstract class LogAdapter implements Log
             return String.format(fmt, args);
         }
         catch (Throwable e)
-        { //¼´Ê¹¸ñÊ½´íÎóÒ²¼ÌĞølog
+        { //å³ä½¿æ ¼å¼é”™è¯¯ä¹Ÿç»§ç»­log
             if (isWarnEnabled())
                 warn("String format fail in log , fmt = " + fmt + " , args = " + args, e);
             return "!!!!Log Fail!!";

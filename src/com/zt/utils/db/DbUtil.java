@@ -6,41 +6,41 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
- * Êı¾İ²Ù×÷¹¤¾ßÀà½Ó¿Ú
+ * æ•°æ®æ“ä½œå·¥å…·ç±»æ¥å£
  * @author zt
  * @since 2010-3-6
  */
 public abstract interface DbUtil
 {
     /**
-     * Ö´ĞĞ´øÈÎÒâ³¤¶È²ÎÊıµÄSQLÓï¾ä
-     * @param sql SQLÃüÁî¿ÉÒÔÊÇCRUD»òSP
-     * @param params SQLÃüÁîËùĞèµÄ²ÎÊı
-     * @return ÊÜÓ°ÏìµÄĞĞÊı
+     * æ‰§è¡Œå¸¦ä»»æ„é•¿åº¦å‚æ•°çš„SQLè¯­å¥
+     * @param sql SQLå‘½ä»¤å¯ä»¥æ˜¯CRUDæˆ–SP
+     * @param params SQLå‘½ä»¤æ‰€éœ€çš„å‚æ•°
+     * @return å—å½±å“çš„è¡Œæ•°
      */
     @SuppressWarnings("finally")
     public abstract int execute(String sql, Object... params);
 
     /**
-     * »ñÈ¡µ¥¸öÊµÌå
-     * @param <T> Òª·µ»ØÊµÌå¶ÔÏó
-     * @param clazz Òª·µ»ØÊµÌå¶ÔÏóµÄÀàĞÍ
-     * @param id Òª»ñÈ¡µÄ¶ÔÏóID
+     * è·å–å•ä¸ªå®ä½“
+     * @param <T> è¦è¿”å›å®ä½“å¯¹è±¡
+     * @param clazz è¦è¿”å›å®ä½“å¯¹è±¡çš„ç±»å‹
+     * @param id è¦è·å–çš„å¯¹è±¡ID
      * @return
      */
     public abstract <T> T get(Class<T> clazz, Serializable id);
 
     /**
-     * »ñÈ¡µ¥¸öÊµÌå¶ÔÏó
+     * è·å–å•ä¸ªå®ä½“å¯¹è±¡
      * @param <T> 
-     * @param objExample ÊµÌå¶ÔÏó ÆäÖĞ°üº¬²¿·Ö»òÈ«²¿ÊôĞÔµÄÖµ
-     * @return ·µ»Ø°üº¬²ÎÊı¶ÔÏóÖĞÊôĞÔµÄÎ¨Ò»ÊµÌå 
-     * Èç¹ûÓĞ¶àĞĞÊı¾İ¶¼Âú×ãÌõ¼şÔò·µ»ØµÚÒ»ĞĞÊı¾İ
+     * @param objExample å®ä½“å¯¹è±¡ å…¶ä¸­åŒ…å«éƒ¨åˆ†æˆ–å…¨éƒ¨å±æ€§çš„å€¼
+     * @return è¿”å›åŒ…å«å‚æ•°å¯¹è±¡ä¸­å±æ€§çš„å”¯ä¸€å®ä½“ 
+     * å¦‚æœæœ‰å¤šè¡Œæ•°æ®éƒ½æ»¡è¶³æ¡ä»¶åˆ™è¿”å›ç¬¬ä¸€è¡Œæ•°æ®
      */
     public abstract <T> T get(T objExample);
 
     /**
-     * »ñÈ¡µ¥¸ö¶ÔÏó
+     * è·å–å•ä¸ªå¯¹è±¡
      * @param <T>
      * @param clazz
      * @param sql
@@ -51,15 +51,15 @@ public abstract interface DbUtil
     public abstract <T> T get(Class<T> clazz, String sql, Object... params);
 
     /**
-     * »ñÈ¡¶ÔÏó¼¯ºÏÁĞ±í
+     * è·å–å¯¹è±¡é›†åˆåˆ—è¡¨
      * @param <T>
-     * @param clazz ÁĞ±íÖĞ°üº¬µÄÊµÌåÀàÃû³Æ
+     * @param clazz åˆ—è¡¨ä¸­åŒ…å«çš„å®ä½“ç±»åç§°
      * @return
      */
     public abstract <T> List<T> getList(Class<T> clazz);
 
     /**
-     * »ñÈ¡¶ÔÏó¼¯ºÏÁĞ±í
+     * è·å–å¯¹è±¡é›†åˆåˆ—è¡¨
      * @param <T>
      * @param clazz
      * @param sql
@@ -70,44 +70,44 @@ public abstract interface DbUtil
     public abstract <T> List<T> getList(Class<T> clazz, String sql, Object... params);
 
     /**
-     * »ñÈ¡¶ÔÏó¼¯ºÏÁĞ±í ÊµÏÖ·ÖÒ³²éÑ¯
+     * è·å–å¯¹è±¡é›†åˆåˆ—è¡¨ å®ç°åˆ†é¡µæŸ¥è¯¢
      * @param <T>
-     * @param clazz ²éÑ¯¶ÔÏóÀà
-     * @param pageSize ²éÑ¯µÄ×î´ó¸öÊı
-     * @param pageIndex µ±Ç°Ò³Êı
+     * @param clazz æŸ¥è¯¢å¯¹è±¡ç±»
+     * @param pageSize æŸ¥è¯¢çš„æœ€å¤§ä¸ªæ•°
+     * @param pageIndex å½“å‰é¡µæ•°
      * @return
      */
     public abstract <T> List<T> getList(Class<T> clazz, int pageSize, int pageIndex);
 
     /**
-     * »ñÈ¡¶ÔÏó¼¯ºÏÁĞ±í ÊµÏÖ·ÖÒ³²éÑ¯
+     * è·å–å¯¹è±¡é›†åˆåˆ—è¡¨ å®ç°åˆ†é¡µæŸ¥è¯¢
      * @param <T>
-     * @param clazz ²éÑ¯¶ÔÏóÀà
-     * @param tableName ¶ÔÏóÀàËù¶ÔÓ¦µÄ±íÃû³Æ
-     * @param uniqueColumn ±íÖĞµÄÈÎÒâÎ¨Ò»ÁĞ
-     * @param pageSize ²éÑ¯µÄ×î´ó¸öÊı
-     * @param pageIndex µ±Ç°Ò³Êı
-     * @param where ²éÑ¯Ìõ¼ş
+     * @param clazz æŸ¥è¯¢å¯¹è±¡ç±»
+     * @param tableName å¯¹è±¡ç±»æ‰€å¯¹åº”çš„è¡¨åç§°
+     * @param uniqueColumn è¡¨ä¸­çš„ä»»æ„å”¯ä¸€åˆ—
+     * @param pageSize æŸ¥è¯¢çš„æœ€å¤§ä¸ªæ•°
+     * @param pageIndex å½“å‰é¡µæ•°
+     * @param where æŸ¥è¯¢æ¡ä»¶
      * @return
      */
     public abstract <T> List<T> getList(Class<T> clazz, int pageSize, int pageIndex, String where);
 
     /**
-     * »ñÈ¡¶ÔÏó¼¯ºÏÁĞ±í ÊµÏÖ·ÖÒ³²éÑ¯
+     * è·å–å¯¹è±¡é›†åˆåˆ—è¡¨ å®ç°åˆ†é¡µæŸ¥è¯¢
      * @param <T>
-     * @param clazz ²éÑ¯¶ÔÏóÀà
-     * @param tableName ¶ÔÏóÀàËù¶ÔÓ¦µÄ±íÃû³Æ
-     * @param uniqueColumn ±íÖĞµÄÈÎÒâÎ¨Ò»ÁĞ
-     * @param pageSize ²éÑ¯µÄ×î´ó¸öÊı
-     * @param pageIndex µ±Ç°Ò³Êı
-     * @param where ²éÑ¯Ìõ¼ş
-     * @param order ÅÅĞòÁĞ
+     * @param clazz æŸ¥è¯¢å¯¹è±¡ç±»
+     * @param tableName å¯¹è±¡ç±»æ‰€å¯¹åº”çš„è¡¨åç§°
+     * @param uniqueColumn è¡¨ä¸­çš„ä»»æ„å”¯ä¸€åˆ—
+     * @param pageSize æŸ¥è¯¢çš„æœ€å¤§ä¸ªæ•°
+     * @param pageIndex å½“å‰é¡µæ•°
+     * @param where æŸ¥è¯¢æ¡ä»¶
+     * @param order æ’åºåˆ—
      * @return
      */
     public abstract <T> List<T> getList(Class<T> clazz, int pageSize, int pageIndex, String where, String order);
 
     /**
-     * ¸ù¾İ¶ÔÏó»ñÈ¡ÓµÓĞ¸Ã¶ÔÏóÊôĞÔµÄËùÓĞ¶ÔÏó
+     * æ ¹æ®å¯¹è±¡è·å–æ‹¥æœ‰è¯¥å¯¹è±¡å±æ€§çš„æ‰€æœ‰å¯¹è±¡
      * @param obj 
      * @param tableName
      * @return
@@ -115,7 +115,7 @@ public abstract interface DbUtil
     public abstract <T> List<T> getListByExample(T objExample);
 
     /**
-     * »ñÈ¡µ¥¸öÖµµÄ¼¯ºÏ
+     * è·å–å•ä¸ªå€¼çš„é›†åˆ
      * @param <T>
      * @param sql
      * @param params
@@ -125,7 +125,7 @@ public abstract interface DbUtil
     public abstract <T> List<T> getValList(String sql, Object... params);
 
     /**
-     * »ñÈ¡µ¥¸öÖµ
+     * è·å–å•ä¸ªå€¼
      * @param <T>
      * @param sql
      * @param params
@@ -135,50 +135,50 @@ public abstract interface DbUtil
     public abstract <T> T getSingleValue(String sql, Object... params);
 
     /**
-     * ĞŞ¸ÄÊµÌå¶ÔÏó
+     * ä¿®æ”¹å®ä½“å¯¹è±¡
      * @param obj
      * @return
      */
     public abstract boolean modify(Object obj);
 
     /**
-     * Ìí¼ÓÊµÌå¶ÔÏó
+     * æ·»åŠ å®ä½“å¯¹è±¡
      * @param obj
      * @return
      */
     public abstract boolean add(Object obj);
 
     /**
-     * É¾³ıµ¥¸ö¶ÔÏóÍ¨¹ı¶ÔÏó±êÊ¶ID
+     * åˆ é™¤å•ä¸ªå¯¹è±¡é€šè¿‡å¯¹è±¡æ ‡è¯†ID
      * @param obj
      * @return
      */
     public abstract boolean delete(Object obj);
 
     /**
-     * É¾³ıµ¥¸ö»òÅúÁ¿¶ÔÏóÍ¨¹ı´«ÈëµÄ¶ÔÏóÊôĞÔ×÷ÎªÌõ¼ş
+     * åˆ é™¤å•ä¸ªæˆ–æ‰¹é‡å¯¹è±¡é€šè¿‡ä¼ å…¥çš„å¯¹è±¡å±æ€§ä½œä¸ºæ¡ä»¶
      * @param obj
-     * @return ²Ù×÷ÊÇ·ñ³É¹¦
+     * @return æ“ä½œæ˜¯å¦æˆåŠŸ
      */
     public abstract boolean deleteByExample(Object obj);
 
     /**
-     * ÅĞ¶ÏÊµÌå¶ÔÏóÊÇ·ñ´æÔÚ
+     * åˆ¤æ–­å®ä½“å¯¹è±¡æ˜¯å¦å­˜åœ¨
      * @param obj
      */
     public abstract boolean exist(Object objExample);
-    //È¥µô dbutilÖĞµÄÊÂÎïÖ§³Ö
+    //å»æ‰ dbutilä¸­çš„äº‹ç‰©æ”¯æŒ
     //    /**
-    //     * Ö´ĞĞ¿É´ø²ÎÊıµÄÈÎºÎÊÂÎï
-    //     * @param commands SQLÃüÁîºÍ²ÎÊıµÄ¼¯ºÏ
-    //     * @return Ã¿ÌõSQLÃüÁîÖ´ĞĞÊı¾İ¿âËùÊÜÓ°ÏìµÄĞĞÊı
+    //     * æ‰§è¡Œå¯å¸¦å‚æ•°çš„ä»»ä½•äº‹ç‰©
+    //     * @param commands SQLå‘½ä»¤å’Œå‚æ•°çš„é›†åˆ
+    //     * @return æ¯æ¡SQLå‘½ä»¤æ‰§è¡Œæ•°æ®åº“æ‰€å—å½±å“çš„è¡Œæ•°
     //     */
     //    public abstract int[] execTransaction(LinkedHashMap<String, Object[]> commands);
     //
     //    /**
-    //     * Ö´ĞĞ¿É´ø²ÎÊıµÄÈÎºÎÊÂÎï
-    //     * @param commands SQLÃüÁîºÍ²ÎÊıµÄ¼¯ºÏ
-    //     * @return ÊÂÎïÖ´ĞĞÊÇ·ñ³É¹¦
+    //     * æ‰§è¡Œå¯å¸¦å‚æ•°çš„ä»»ä½•äº‹ç‰©
+    //     * @param commands SQLå‘½ä»¤å’Œå‚æ•°çš„é›†åˆ
+    //     * @return äº‹ç‰©æ‰§è¡Œæ˜¯å¦æˆåŠŸ
     //     */
     //    public abstract boolean executeTransaction(LinkedHashMap<String, Object[]> commands);
 

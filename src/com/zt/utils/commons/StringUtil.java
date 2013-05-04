@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 
 /**
- * String¸¨ÖúÀà
+ * Stringè¾…åŠ©ç±»
  * @author zt
  *
  */
@@ -14,9 +14,9 @@ public class StringUtil {
 	public static final String[] STRINGS_MODE = new String[0];
 	
 	/**
-	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎªNull »òÊÇ ""
-	 * @param str Òª½øĞĞÅĞ¶ÏµÄ×Ö·û´®
-	 * @return ÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºNull æˆ–æ˜¯ ""
+	 * @param str è¦è¿›è¡Œåˆ¤æ–­çš„å­—ç¬¦ä¸²
+	 * @return æ˜¯å¦ä¸ºç©º
 	 */
 	public static boolean IsNullOrEmpty(Object str)
 	{
@@ -26,9 +26,9 @@ public class StringUtil {
 		return false;
 	}
 	/**
-	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎªNULL
-	 * @param str  Òª½øĞĞÅĞ¶ÏµÄ×Ö·û´®
-	 * @return ÊÇ·ñÎªNULL
+	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºNULL
+	 * @param str  è¦è¿›è¡Œåˆ¤æ–­çš„å­—ç¬¦ä¸²
+	 * @return æ˜¯å¦ä¸ºNULL
 	 */
 	public static boolean IsNull(Object str)
 	{
@@ -36,9 +36,9 @@ public class StringUtil {
 	}
 	
 	/**
-	 * ÓÃ·Ö¸ô·û½«Êı×éÁ¬½ÓÆğÀ´,×ª»»³ÉÎª×Ö·û´®·µ»Ø
-	 * @param seperator ·Ö¸ô·û
-	 * @param strings ÒªÌí¼Ó·Ö¸ô·ûµÄ×Ö·û´®
+	 * ç”¨åˆ†éš”ç¬¦å°†æ•°ç»„è¿æ¥èµ·æ¥,è½¬æ¢æˆä¸ºå­—ç¬¦ä¸²è¿”å›
+	 * @param seperator åˆ†éš”ç¬¦
+	 * @param strings è¦æ·»åŠ åˆ†éš”ç¬¦çš„å­—ç¬¦ä¸²
 	 */
 	public static String join(String seperator, String[] strings) {
 	    int length = strings.length;
@@ -52,11 +52,11 @@ public class StringUtil {
 	  }
 	
 	/**
-	 * ÓÃ·Ö¸ô·û½«Êı×éÁ¬½ÓÆğÀ´,×ª»»³ÉÎª×Ö·û´®·µ»Ø
-	 * @param seperator ·Ö¸ô·û
-	 * @prefix Ç°×º×Ö·û
-	 * @param strings ÒªÌí¼Ó·Ö¸ô·ûµÄ×Ö·û´®
-	 * @suffix ºó×º×Ö·û
+	 * ç”¨åˆ†éš”ç¬¦å°†æ•°ç»„è¿æ¥èµ·æ¥,è½¬æ¢æˆä¸ºå­—ç¬¦ä¸²è¿”å›
+	 * @param seperator åˆ†éš”ç¬¦
+	 * @prefix å‰ç¼€å­—ç¬¦
+	 * @param strings è¦æ·»åŠ åˆ†éš”ç¬¦çš„å­—ç¬¦ä¸²
+	 * @suffix åç¼€å­—ç¬¦
 	 */
 	public static String join(String seperator,char prefix,  String[] strings,char suffix) {
 	    int length = strings.length;
@@ -72,9 +72,9 @@ public class StringUtil {
 	
 	
 	/**
-	 * ÔÚÊı×éÖĞÃ¿Ò»Ïîºó±ß×·¼ÓÖ¸¶¨×Ö·û´®
-	 * @param appendItem ×·¼ÓÏî
-	 * @param strings Ô­Êı×é
+	 * åœ¨æ•°ç»„ä¸­æ¯ä¸€é¡¹åè¾¹è¿½åŠ æŒ‡å®šå­—ç¬¦ä¸²
+	 * @param appendItem è¿½åŠ é¡¹
+	 * @param strings åŸæ•°ç»„
 	 * @return
 	 */
 	public static String append(String appendItem,String[] strings) {
@@ -89,11 +89,11 @@ public class StringUtil {
 	}
 	
 	/**
-	 * ½ØÈ¡×Ö·û´®
-	 * Èç¹ûÒª½ØÈ¡µÄ×Ö·û´®µÄ×Ö½Ú³¤¶ÈĞ¡ÓÚbyteLengthÔò·µ»ØÕû¸ö×Ö·û´®
-	 * ·ñÔò½ØÈ¡byteLength³¤¶ÈµÄ×Ö½ÚÊıµÄ×Ö·û´®·µ»Ø
-	 * @param str Òª½øĞĞ½ØÈ¡µÄ×Ö·û´®
-	 * @param byteLength Òª½ØÈ¡×Ö·û´®µÄ×Ö½Ú³¤¶È
+	 * æˆªå–å­—ç¬¦ä¸²
+	 * å¦‚æœè¦æˆªå–çš„å­—ç¬¦ä¸²çš„å­—èŠ‚é•¿åº¦å°äºbyteLengthåˆ™è¿”å›æ•´ä¸ªå­—ç¬¦ä¸²
+	 * å¦åˆ™æˆªå–byteLengthé•¿åº¦çš„å­—èŠ‚æ•°çš„å­—ç¬¦ä¸²è¿”å›
+	 * @param str è¦è¿›è¡Œæˆªå–çš„å­—ç¬¦ä¸²
+	 * @param byteLength è¦æˆªå–å­—ç¬¦ä¸²çš„å­—èŠ‚é•¿åº¦
 	 */
 	public static String subString(String str,int byteLength)
 	{
@@ -118,9 +118,9 @@ public class StringUtil {
 	}
 	
 	/**
-	 * ÔÚÊı×éÖĞÃ¿Ò»Ïîºó±ß×·¼ÓÖ¸¶¨×Ö·û´®
-	 * @param appendItem ×·¼ÓÏî
-	 * @param strings Ô­Êı×é
+	 * åœ¨æ•°ç»„ä¸­æ¯ä¸€é¡¹åè¾¹è¿½åŠ æŒ‡å®šå­—ç¬¦ä¸²
+	 * @param appendItem è¿½åŠ é¡¹
+	 * @param strings åŸæ•°ç»„
 	 */
 	public static String append(String appendItem,char prefix,  String[] strings,char suffix) {
 		if (strings.length==0) {
@@ -134,7 +134,7 @@ public class StringUtil {
 	}
 	
 	/**
-	 * ÔÚÊı×éÖĞÃ¿Ò»ÏîÇ°ºó¼ÓÉÏÖ¸¶¨×Ö·û
+	 * åœ¨æ•°ç»„ä¸­æ¯ä¸€é¡¹å‰ååŠ ä¸ŠæŒ‡å®šå­—ç¬¦
 	 * @param params
 	 */
 	public static String[] superaddition(char prefix, String[] params,char suffix) {

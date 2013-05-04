@@ -37,8 +37,8 @@ public abstract class AbstractDbUtil implements DbUtil
     protected Connection conn;
 
     protected PreparedStatement pstmt;
-    //È¥µôÊÂÎïÖ§³Ö 
-    //    protected int status = Status.STATUS_UNKNOWN; // ÊÂÎïµ±Ç°×´Ì¬
+    //å»æ‰äº‹ç‰©æ”¯æŒ 
+    //    protected int status = Status.STATUS_UNKNOWN; // äº‹ç‰©å½“å‰çŠ¶æ€
     //
     //    protected boolean commitSuccessful = true;
 
@@ -78,7 +78,7 @@ public abstract class AbstractDbUtil implements DbUtil
     //    }
     //
     //    /**
-    //     * Èç¹û²»´æÔÚÊÂÎï ¹Ø±Õ²Ù×÷¶ÔÏó ´Ë·½·¨È·±£ÊÂÎïµÄÕı³£½øĞĞ
+    //     * å¦‚æœä¸å­˜åœ¨äº‹ç‰© å…³é—­æ“ä½œå¯¹è±¡ æ­¤æ–¹æ³•ç¡®ä¿äº‹ç‰©çš„æ­£å¸¸è¿›è¡Œ
     //     */
     //    private void reset()
     //    {
@@ -89,7 +89,7 @@ public abstract class AbstractDbUtil implements DbUtil
     //    }
 
     /**
-     * È·±£µ±Ç°Á¬½Ó²»Îª¿Õ
+     * ç¡®ä¿å½“å‰è¿æ¥ä¸ä¸ºç©º
      * 
      * @return
      */
@@ -131,7 +131,7 @@ public abstract class AbstractDbUtil implements DbUtil
     }
 
     /**
-     * »ñÈ¡ÊµÌåÀàËù¶ÔÓ¦µÄËùÓĞ ·Ç¿Õ Êı¾İÁĞÃû³ÆºÍÖµ
+     * è·å–å®ä½“ç±»æ‰€å¯¹åº”çš„æ‰€æœ‰ éç©º æ•°æ®åˆ—åç§°å’Œå€¼
      * 
      * @param <T>
      * @param obj
@@ -147,7 +147,7 @@ public abstract class AbstractDbUtil implements DbUtil
         Map<String, Object> columns = new LinkedHashMap<String, Object>();
         for (Field field : clazz.getDeclaredFields())
         {
-            // Èç¹ûÎªÊı¾İÁĞ
+            // å¦‚æœä¸ºæ•°æ®åˆ—
             if (table.getColumnsMap().containsKey(field.getName()))
             {
                 field.setAccessible(true);
@@ -168,7 +168,7 @@ public abstract class AbstractDbUtil implements DbUtil
     }
 
     /**
-     * »ñÈ¡ÓëÊµÌåÏà¹ØÁªµÄ±íÖĞËùÓĞÖ÷¼üÁĞ
+     * è·å–ä¸å®ä½“ç›¸å…³è”çš„è¡¨ä¸­æ‰€æœ‰ä¸»é”®åˆ—
      * 
      * @param <T>
      * @param obj
@@ -188,7 +188,7 @@ public abstract class AbstractDbUtil implements DbUtil
         Map<String, Object> columns = new LinkedHashMap<String, Object>();
         for (Field field : clazz.getDeclaredFields())
         {
-            // Èç¹ûÎªÊı¾İÁĞ
+            // å¦‚æœä¸ºæ•°æ®åˆ—
             if (table.getColumnsMap().containsKey(field.getName()))
             {
                 field.setAccessible(true);
@@ -397,7 +397,7 @@ public abstract class AbstractDbUtil implements DbUtil
             Map<String, Object> columns = getNotNullColumns(obj, false);
             if (columns.isEmpty())
             {
-                log.error("ÒªĞŞ¸ÄµÄÊµÌåÀàÖĞ³ıÖ÷¼üÍâÃ»ÓĞÈÎºÎ×Ö¶Î±»¸³Öµ£¡");
+                log.error("è¦ä¿®æ”¹çš„å®ä½“ç±»ä¸­é™¤ä¸»é”®å¤–æ²¡æœ‰ä»»ä½•å­—æ®µè¢«èµ‹å€¼ï¼");
             }
 
             update.addColumns(StringUtil.superaddition(openQuote(), columns.keySet().toArray(StringUtil.STRINGS_MODE),
@@ -455,7 +455,7 @@ public abstract class AbstractDbUtil implements DbUtil
             Map<String, Object> primaryKeyColumns = getprimaryKeyColumns(obj);
             if (primaryKeyColumns.size() == 0)
             {
-                log.error("ÒªÉ¾³ıµÄÊµÌåÃ»ÓĞÎ¨Ò»±êÊ¶");
+                log.error("è¦åˆ é™¤çš„å®ä½“æ²¡æœ‰å”¯ä¸€æ ‡è¯†");
             }
             Delete delete = new Delete().setTableName(getWapperQuote(table.getName()));
 
@@ -473,9 +473,9 @@ public abstract class AbstractDbUtil implements DbUtil
     }
 
     /**
-     * É¾³ı¶ÔÏóÍ¨¹ı¶ÔÏóID
+     * åˆ é™¤å¯¹è±¡é€šè¿‡å¯¹è±¡ID
      * @param obj
-     * @return ²Ù×÷ÊÇ·ñ³É¹¦
+     * @return æ“ä½œæ˜¯å¦æˆåŠŸ
      */
     public boolean deleteByExample(Object obj)
     {
@@ -522,17 +522,17 @@ public abstract class AbstractDbUtil implements DbUtil
         try
         {
             conn = getConnection();
-            conn.setAutoCommit(false); // ÉèÖÃ×Ô¶¯Ìá½»Îªfalse
+            conn.setAutoCommit(false); // è®¾ç½®è‡ªåŠ¨æäº¤ä¸ºfalse
 
             int flag = 0;
             for (Entry<String, Object[]> command : commands.entrySet())
             {
-                pstmt = conn.prepareStatement(command.getKey()); // Ìí¼ÓSQLÃüÁî
+                pstmt = conn.prepareStatement(command.getKey()); // æ·»åŠ SQLå‘½ä»¤
 
                 if (command.getValue() != null)
                     for (int i = 0; i < command.getValue().length; i++)
                     {
-                        pstmt.setObject(i + 1, command.getValue()[i]); // Ìí¼ÓÃ¿Ò»¸öSQLÃüÁîÖ´ĞĞËùĞèÒªµÄ²ÎÊı
+                        pstmt.setObject(i + 1, command.getValue()[i]); // æ·»åŠ æ¯ä¸€ä¸ªSQLå‘½ä»¤æ‰§è¡Œæ‰€éœ€è¦çš„å‚æ•°
                     }
                 results[flag++] = pstmt.executeUpdate();
             }
@@ -562,15 +562,15 @@ public abstract class AbstractDbUtil implements DbUtil
         try
         {
             conn = getConnection();
-            conn.setAutoCommit(false); // ÉèÖÃ×Ô¶¯Ìá½»Îªfalse
+            conn.setAutoCommit(false); // è®¾ç½®è‡ªåŠ¨æäº¤ä¸ºfalse
 
             for (Entry<String, Object[]> command : commands.entrySet())
             {
-                pstmt = conn.prepareStatement(command.getKey()); // Ìí¼ÓSQLÃüÁî
+                pstmt = conn.prepareStatement(command.getKey()); // æ·»åŠ SQLå‘½ä»¤
                 if (command.getValue() != null)
                     for (int i = 0; i < command.getValue().length; i++)
                     {
-                        pstmt.setObject(i + 1, command.getValue()[i]); // Ìí¼ÓÃ¿Ò»¸öSQLÃüÁîÖ´ĞĞËùĞèÒªµÄ²ÎÊı
+                        pstmt.setObject(i + 1, command.getValue()[i]); // æ·»åŠ æ¯ä¸€ä¸ªSQLå‘½ä»¤æ‰§è¡Œæ‰€éœ€è¦çš„å‚æ•°
                     }
 
                 pstmt.executeUpdate();
@@ -658,8 +658,8 @@ public abstract class AbstractDbUtil implements DbUtil
     }
 
     /**
-     * »ñÈ¡°ü×°ºóµÄÊı¾İ·½ÑÔ×Ö¶Î
-     * @param target Òª°ü×°µÄÄÚÈİ
+     * è·å–åŒ…è£…åçš„æ•°æ®æ–¹è¨€å­—æ®µ
+     * @param target è¦åŒ…è£…çš„å†…å®¹
      * @return
      */
     protected String getWapperQuote(String target)

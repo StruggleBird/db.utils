@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Ψһ��Լ��
+ * 唯一键约束
  * @author zhoutao
  *
  */

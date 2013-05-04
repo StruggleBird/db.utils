@@ -11,7 +11,7 @@ import com.zt.utils.log.Log;
 import com.zt.utils.log.LogFactory;
 
 /**
- * dbutil ´úÀíÀà
+ * dbutil ä»£ç†ç±»
  * @author zhoutao
  *
  */
@@ -34,7 +34,7 @@ public class DbUtilHandler implements InvocationHandler
         if (args.length > 0)
         {
             Class<?> firstArgClass = args[0].getClass();
-            //ÅĞ¶Ïµ±Ç°ÀàÊÇ·ñÎªÌí¼ÓÁËEntity×¢½âµÄÀà£¬ÒÔ·Ö±æÊÇ·ñÎªPOJO
+            //åˆ¤æ–­å½“å‰ç±»æ˜¯å¦ä¸ºæ·»åŠ äº†Entityæ³¨è§£çš„ç±»ï¼Œä»¥åˆ†è¾¨æ˜¯å¦ä¸ºPOJO
             if (firstArgClass.isAnnotation() && firstArgClass.isAnnotationPresent(Entity.class))
             {
                 Context.registerTable(firstArgClass);

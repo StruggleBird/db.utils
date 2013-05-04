@@ -2,7 +2,7 @@
 package com.zt.utils.log;
 
 /**
- * ÈÕÖ¾¹¤³§Àà
+ * æ—¥å¿—å·¥å‚ç±»
  * @author zhoutao
  *
  */

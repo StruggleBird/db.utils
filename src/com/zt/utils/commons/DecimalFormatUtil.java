@@ -3,7 +3,7 @@ package com.zt.utils.commons;
 import java.text.DecimalFormat;
 
 /**
- * 数字格式化工具类
+ * 鏁板瓧鏍煎紡鍖栧伐鍏风被
  * @author zt
  *
  */
